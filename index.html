@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="js/nouislider.min.css">
+    <link rel="stylesheet" href="css/fonts.scss">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Disalt catalog</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo"><img src="img/logo.svg" alt=""></a>
+                <ul class="header__menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span>Главная</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span>Каталог</span>
+                            <img src="img/arrowDown.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span>Услуги</span>
+                            <img src="img/arrowDown.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span>Проекты</span>
+                            <img src="img/arrowDown.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="header__contacts">
+                    <div class="header__whatsapp">
+                        <img src="img/whatsapp.svg" alt="">
+                        <a class="header__tel" href="tel:+78462540163">+7 846 25 40 163</a>
+                    </div>
+                    <button class="header__button">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="settings">
+            <div class="container">
+                <div class="settings__menu">
+                    <span>Каталог</span>
+                    <span>/</span>
+                    <span>Дизельные генераторы</span>
+                    <span>/</span>
+                    <span>С импортными двигателями</span>
+                </div>
+                <div class="settings__cont">
+                    <div class="setting__power">
+                        <div class="setting__power-title" onclick="settingPowerF()">
+                            <p>Мощность ДГУ, КвТ</p>
+                        </div>
+                        <div class="setting__power-onclick" id="setting__power-onclick">
+                            <div class="filters-price__inputs">
+                                <label class="filters-price__label">
+                                    <span class="filters-price__text">от</span>
+                                    <input type="number" min="1" max="2000" placeholder="1" class="filters-price__input" id="input-0">
+                                </label>
+                                <p>-</p>
+                                <label class="filters-price__label">
+                                    <span class="filters-price__text">до</span>
+                                    <input type="number" min="1" max="2000" placeholder="2000" class="filters-price__input" id="input-1">
+                                </label>
+                            </div>
+                            <div class="filters-price__slider" id="range-slider"></div>
+                        </div>
+                    </div>
+                    <div class="setting__automation">
+                        <div class="setting__automation-title" onclick="settingPowerF2()">
+                            <p>Автоматизация</p>
+                        </div>
+                        <div class="setting__automation-onclick" id="setting__automation-onclick">
+                            <div class="setting__automation-onclick-cont">
+                                <label>
+                                    <input type="checkbox" id="setting__automation-checkboxOne">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label class="setting__automation-checkbox" for="setting__automation-checkboxOne">
+                                    <p class="setting__automation-checkboxP">1-я степень 35</p>
+                                    <img src="img/exclamation.svg" alt="" class="setting__automationImg">
+                                </label>
+                            </div>
+                            <div class="setting__automation-onclick-cont">
+                                <label>
+                                    <input type="checkbox" id="setting__automation-checkboxTwo">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label class="setting__automation-checkbox" for="setting__automation-checkboxTwo">
+                                    <p>2-я степень 87</p>
+                                    <img src="img/exclamation.svg" alt="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting__execution">
+                        <div class="setting__execution-title" onclick="settingPowerF3()">
+                            <p>Исполнение</p>
+                        </div>
+                        <div class="setting__execution-onclick" id="setting__execution-onclick">
+                            <div class="setting__automation-onclick-cont">
+                                <label>
+                                    <input type="checkbox" id="setting__execution-checkboxOne">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label class="setting__automation-checkbox" for="setting__execution-checkboxOne">
+                                    <p>Блок-контейнер 35</p>
+                                </label>
+                            </div>
+                            <div class="setting__automation-onclick-cont">
+                                <label>
+                                    <input type="checkbox" id="setting__execution-checkboxTwo">
+                                    <span class="checkbox"></span>
+                                </label>
+                                <label class="setting__automation-checkbox" for="setting__execution-checkboxTwo">
+                                    <p>Открытое 10</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting__open">
+                        <div class="setting__automation-onclick-cont">
+                            <label>
+                                <input type="checkbox" id="setting__open-checkboxOne">
+                                <span class="checkbox"></span>
+                            </label>
+                            <label class="setting__automation-checkbox" for="setting__open-checkboxOne">
+                                <p>Кожух 87</p>
+                            </label>
+                        </div>
+                        <div class="setting__automation-onclick-cont">
+                            <label>
+                                <input type="checkbox" id="setting__open-checkboxTwo">
+                                <span class="checkbox"></span>
+                            </label>
+                            <label class="setting__automation-checkbox" for="setting__open-checkboxTwo">
+                                <p>Открытое 10</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting__contTwo">
+                    <div class="setting__producer">
+                        <div class="setting__producer-title" onclick="settingPowerF4()">
+                            <p>Производитель двигателя</p>
+                        </div>
+                        <div class="setting__container">
+                            <div class="setting__producer-onclick" id="setting__producer-onclick">
+                                <div class="setting__producer-onclick-cont">
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-1">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-1">
+                                            <p>Baudouin 15</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-2">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-2">
+                                            <p>JOHN DEERE 27</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-3">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-3">
+                                            <p>Perkins 87</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-4">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-4">
+                                            <p>VOLVO 10</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting__producer-onclick-cont">
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-5">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-5">
+                                            <p>Baudouin 15</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-6">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-6">
+                                            <p>JOHN DEERE 27</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-7">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-7">
+                                            <p>Perkins 87</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-8">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-8">
+                                            <p>VOLVO 10</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting__producer-onclick-cont">
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-9">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-9">
+                                            <p>Baudouin 15</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-10">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-10">
+                                            <p>JOHN DEERE 27</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-11">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-11">
+                                            <p>Perkins 87</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-12">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-12">
+                                            <p>VOLVO 10</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="setting__producer-onclick-cont">
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-13">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-13">
+                                            <p>Baudouin 15</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-14">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-14">
+                                            <p>JOHN DEERE 27</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-15">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-15">
+                                            <p>Perkins 87</p>
+                                        </label>
+                                    </div>
+                                    <div class="setting__automation-onclick-cont">
+                                        <label>
+                                            <input type="checkbox" id="setting__producer-checkbox-16">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label class="setting__automation-checkbox" for="setting__producer-checkbox-16">
+                                            <p>VOLVO 10</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="setting__button">Применить фильтры</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__line"></div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="container">
+                <div class="Bestsellers__content-cont">
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Bestsellers__content-cont Bestsellers__content-margin">
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bestsellers__content-item">
+                        <img src="img/engine.svg" alt="">
+                        <div class="Bestsellers__content-item-cont">
+                            <p class="Bestsellers__content-compani">Scania</p>
+                            <p class="Bestsellers__content-title">Дизельная электростанция АД680</p>
+                            <div class="Bestsellers__content-character">
+                                <p class="Bestsellers__content-text">Основная мощность...........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Резервная мощность.........<span>12 кВт / 15 кВa</span></p>
+                                <p class="Bestsellers__content-text">Объем бака........................................................<span>2 л/ч</span></p>
+                                <p class="Bestsellers__content-text">Расход топлива (75%).................................<span>2 л/ч</span></p>
+                            </div>
+                            <div class="Bestsellers__content-button">
+                                <button class="Bestsellers__content-Basket">В корзину</button>
+                                <button class="Bestsellers__content-particular">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="questions">
+            <div class="container">
+                <p class="questions__title">Ответы на вопросы</p>
+                <p class="question__text">Ответили на самые частозадаваемые вами вопросы:</p>
+                <div class="QuestionAnswer">
+                    <div class="QuestionAnswer__blocks">
+                        <div class="collapse">
+                            <div class="collapse__content">
+                                <p>КАКИЕ У ВАС ВАРИАНТЫ ОПЛАТЫ?</p>
+                                <img src="./img/needle.svg" />
+                            </div>
+                            <div class="wrapper">
+                                <p class="list">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapse">
+                            <div class="collapse__content">
+                                <p>куда вы можете провести доставку?</p>
+                                <img src="./img/needle.svg" />
+                            </div>
+                            <div class="wrapper">
+                                <p class="list">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapse">
+                            <div class="collapse__content">
+                                <p>помогаете ли вы с настройкой оборудования?</p>
+                                <img src="./img/needle.svg" />
+                            </div>
+                            <div class="wrapper">
+                                <p class="list">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapse">
+                            <div class="collapse__content">
+                                <p>сами ли вы собираете генераторы?</p>
+                                <img src="./img/needle.svg" />
+                            </div>
+                            <div class="wrapper">
+                                <p class="list">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapse">
+                            <div class="collapse__content">
+                                <p>Сколько времени ПРОХОДИТ с момента заявки до доставки?</p>
+                                <img src="./img/needle.svg" />
+                            </div>
+                            <div class="wrapper">
+                                <p class="list">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stillQuestions">
+                    <div class="stillQuestions__cont">
+                        <p class="stillQuestions__title">Остались вопросы?</p>
+                        <p class="stillQuestions__text">Оставьте свои контакты и мы обязательно с вами свяжемся</p>
+                        <div class="stillQuestions__input-cont">
+                            <input type="text" class="stillQuestions__input" placeholder="Имя">
+                            <input type="text" class="stillQuestions__input" placeholder="Номер телефона">
+                        </div>
+                        <div class="stillQuestions__inputButton">
+                            <label>
+                                <input type="checkbox" id="stillQuestions__checkbox">
+                                <span class="checkbox"></span>
+                            </label>
+                            <label class="stillQuestions__checkbox-text" for="stillQuestions__checkbox">Запросить прайс-лист</label>
+                        </div>
+                        <div class="stillQuestions__politic-cont">
+                            <p class="stillQuestions__politic">Нажимая на кнопку “Отправить” вы соглашаетесь с<a href="#"> политикой конфиденциальности</a></p>
+                            <button class="stillQuestions__button">Отправить</button>
+                        </div>
+                    </div>
+                    <img src="img/stillQuestionsImg.svg" alt="" class="stillQuestionsImg">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__menu">
+                <div class="footer__menuOne">
+                    <div class="footer__menu-item"><a href="#" class="footer__menu-link">Главная</a></div>
+                    <div class="footer__menu-item"><a href="#" class="footer__menu-link">Продукция</a></div>
+                    <div class="footer__menu-item"><a href="#" class="footer__menu-link">Комплектующие</a></div>
+                </div>
+                <div class="footer__menuTwo">
+                    <div class="footer__logo"><a href="index.html"><img src="img/logo.svg" alt=""></a></div>
+                    <div class="footer__contact">
+                        <a href="mailto:info@diz-alt.ru" class="footer__menu-link">info@diz-alt.ru</a>
+                        <a href="tel:+78462540163" class="footer__menu-link">+7 846 25 40 163</a>
+                    </div>
+                </div>
+                <div class="footer__menuOne">
+                    <div class="footer__menu-item"><a href="#" class="footer__menu-link">Услуги</a></div>
+                    <div class="footer__menu-item"><a href="#" class="footer__menu-link">Поставщикам</a></div>
+                    <div class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a></div>
+                </div>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__info">
+                <p class="footer__info-text">2023, ООО «ДИЗАЛЬТ» — производство и продажа дизельных электростанций</p>
+                <div class="footer__info-cont">
+                    <a href="https://diz-alt.ru/soglashenie-ob-edo/" class="footer__info-link">Соглашение об ЭДО</a>
+                    <a href="https://diz-alt.ru/juridicheska-informaciya/" class="footer__info-link">Правовая информация</a>
+                    <a href="https://diz-alt.ru/soglasie-na-obrabotku-personalnyh-dannyh/" class="footer__info-link">Политика защиты и обработки персональных данных</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/catalog.js"></script>
+    <!--<script src="js/main.js"></script>-->
+</body>
+</html>
